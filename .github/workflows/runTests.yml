@@ -1,11 +1,13 @@
-name: 🚀 Run
+name: Commit
 
 on:
-  workflow_dispatch:
+  commit:
+    branches:
+      - main
 
 jobs:
   run:
-    name: 🚀 Run
+    name: Commit
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -16,4 +18,4 @@ jobs:
       - name: 🚀 Run
         shell: bash
         run: |
-          python3 main.py
+          python3 treeTest.py
